@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">流量监控</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">重新计数</string>
+    
+    
+    <string name="app_icon_item">图标</string>
+    <string name="app_name_item">名称</string>
+    <string name="app_rx_item">下载</string>
+    <string name="app_tx_item">上传</string>
+    <string name="app_total_item">总量</string>
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">手电筒</string>
+    <string name="exit">再按一次返回键关闭程序</string>
+    <string name="flash_light">控制闪光灯</string>
+    <string name="desk_top">控制桌面</string>
+
+</resources>

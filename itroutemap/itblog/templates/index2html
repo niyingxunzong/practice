@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+
+ <body>
+
+{% autoescape off %} 
+    {%if blogs %}
+  		{%for blog in blogs%}
+	  		<div>{{ blog.title }}</div>
+	    	{{ blog.body_text }}
+	    	{{ blog.pub_date | date:"F j, Y" }}
+	    	{{ blog.comments.count }}
+		{%endfor%}
+	{%endif%}
+{% endautoescape %} 
+</body>
+</html>

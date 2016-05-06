@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black" >
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black" >
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_toggle" 
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="Q^Q"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="#ffffffff"
+        android:background="@drawable/oval_button_bg"
+        />
+</RelativeLayout>

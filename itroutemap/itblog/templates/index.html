@@ -1,0 +1,199 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Socialike</title>
+<link rel="shortcut icon" type="image/x-icon" href="../static/itblog/style/images/favicon.png" />
+
+<link rel="stylesheet" type="text/css" href="../static/itblog/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../static/itblog/style/css/prettyPhoto.css"  />
+<link rel="stylesheet" type="text/css" href="../static/itblog/style/type/classic.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../static/itblog/style/type/goudy.css" media="all" />
+<script type="text/javascript" src="../static/itblog/style/js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="../static/itblog/style/js/superfish.js"></script>
+<script type="text/javascript" src="../static/itblog/style/js/jquery.prettyPhoto.js"></script>
+
+<!--用来Google的代码插件实现代码高亮显示-->
+<script src="../static/google-code-prettify/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../static/google-code-prettify/prettify.css" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("pre").addClass("linenums");    //为了显示行号，这个也可以在文本编辑器中添加，不过我现在还没决定用哪个文本编辑器
+});
+</script>
+
+</head>
+<body onload="prettyPrint()">
+<div id="body-wrapper"> 
+
+  <!-- Begin Header -->
+  <div id="header">
+    <div class="logo">
+      <a href=""><img src="../static/itblog/style/images/logo.png" alt="" /></a>
+    </div>
+
+    
+    <!-- Begin Menu -->
+    <div class="menu">
+      <ul class="sf-menu">
+        <li>
+        	<a href="">Home</a>
+        </li>
+        <li>
+        	<a href="#">Android</a>
+        </li>
+        <li><a href="#">Python</a></li>
+        <li>
+        	<a href="#">Java</a>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <!-- End Menu --> 
+    
+  </div>
+  <!-- End Header --> 
+  
+  
+{% autoescape off %}   
+  <!-- Begin Wrapper -->
+  <div id="wrapper">
+  
+   <div class="intro">Phasellus vitae lectus sit amet ipsum fringilla viverra at et leo. Cras iaculis, sem vel venenatis sodales, elit dui elementum lorem, ut semper ligula ipsum at sapien.</div>
+   
+  	<!-- Begin Container -->
+  	<div class="container">
+  	
+  {%if blogs %}
+  
+  	{%for blog in blogs%}
+  	  <div class="post text">
+  	    <div class="icon-text"></div>
+    <div class="content">
+    	<div class="top"></div>
+    	<div class="middle">
+    		<div class="post-text" style="">
+    			<h2 class="title"><a href="#">{{ blog.title }}</a></h2>
+    			<p>
+    				{{ blog.body_text }}
+    			</p>
+    		</div>
+    		<div class="meta-wrapper">
+			<div class="meta">
+    			<ul class="post-info">
+    				<li><span class="post-link"></span><a href="#">{{ blog.pub_date | date:"F j, Y" }}</a></li>
+    				<li><span class="post-comment"></span><a href="#">{{ blog.comments.count }}</a></li>
+    				<li><span class="post-tag" title="标签"></span><a href="#">quote</a>, <a href="#">library</a></li>
+    			</ul>
+    			<div class="share"><span class="post-share"></span><a href="#">Share</a></div>
+    			<div class="clear"></div>
+    		</div>
+    		</div>
+    	</div>
+    	<div class="bottom"></div>
+    </div>
+  </div>
+		{%endfor%}
+	{%endif%}
+	
+    <!-- Begin Page Navi 这个地方时页码   分页-->
+    <div class="page-navi">
+    
+    	<!-- 如果当前是第一页，就不显示【上一页】链接 -->
+        {% ifnotequal curPage 1 %}
+            <a href="?curPage={{ curPage }}&&allPage={{ allPage }}&&pageType=pageUp">
+                	上一页
+            </a>
+        {% endifnotequal %} 
+
+       	 第{{ curPage }}/{{ allPage }}页 
+
+         <!-- 如果当前是最后一页，就不显示【下一页】链接 -->
+        {% ifnotequal curPage allPage %}
+            <a href="?curPage={{ curPage }}&&allPage={{ allPage }}&&pageType=pageDown">
+                	下一页
+            </a>
+        {% endifnotequal %}
+    
+    		<!--ul>
+    			<li><a href="#" class="current">1</a></li>
+    			<li><a href="#">2</a></li>
+    			<li><a href="#">3</a></li>
+    		</ul-->
+    </div>
+    <!-- End Page Navi -->
+    
+	</div> <!-- End Container -->
+	
+	<div class="sidebar">
+	
+		<div class="sidebox">
+			<div class="sidebox">
+			  <h3 class="line">搜索</h3>
+			  <form class="searchform" method="get">
+			    <input type="text" id="s" name="s" value="type and hit enter" onfocus="this.value=''" onblur="this.value='type and hit enter'"/>
+		      </form>
+		  </div>
+			<h3 class="line">About</h3>
+			<p>Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+			<br />
+			<p>Amet risus nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. </p>
+	  </div>
+		
+		<div class="sidebox">
+			<h3 class="line">Popular Posts</h3>
+			<ul class="popular-posts">
+				<li>
+					<a href="#"><img src="../static/itblog/style/images/art/ad1.jpg" alt="" /></a>
+					<h5><a href="#">Dolor Commodo Consectetur</a></h5>
+					<span>26 August 2011 | <a href="#">21 Comments</a></span>
+				</li>
+				
+				<li>
+					<a href="#"><img src="../static/itblog/style/images/art/ad2.jpg" alt="" /></a>
+					<h5><a href="#">Dolor Commodo Consectetur</a></h5>
+					<span>26 August 2011 | <a href="#">21 Comments</a></span>
+				</li>
+				
+				<li>
+					<a href="#"><img src="../static/itblog/style/images/art/ad3.jpg" alt="" /></a>
+					<h5><a href="#">Dolor Commodo Consectetur</a></h5>
+					<span>26 August 2011 | <a href="#">21 Comments</a></span>
+				</li>
+			</ul>
+		</div>
+		
+		
+	  <div class="sidebox">
+			<h3 class="line">Categories</h3>
+			<ul class="cat-list">
+				<li><a href="#">Web Design (15)</a></li>
+				<li><a href="#">Photography (17)</a></li>
+				<li><a href="#">Grapic Design (34)</a></li>
+				<li><a href="#">Manipulation (24)</a></li>
+				<li><a href="#">Web Design (15)</a></li>
+				<li><a href="#">Photography (17)</a></li>
+				<li><a href="#">Grapic Design (34)</a></li>
+				<li><a href="#">Manipulation (24)</a></li>
+			</ul>
+		</div>
+	</div>
+    <div class="clear"></div>
+    
+  </div>
+  <!-- End Wrapper -->
+{% endautoescape %}  
+  <div class="push"></div>
+</div>
+<!-- End Body Wrapper -->
+
+<div id="footer">
+  <div class="footer">
+    <p>Copyright &copy; 2011 Socialike. All Rights Reserved.Collect from <a href="http://itroutemap.sinaapp.com/" title="网页模板" target="_blank">Comcons</a></p>
+  </div>
+</div>
+<script type="text/javascript" src="../static/itblog/style/js/scripts.js"></script>
+</body>
+</html>

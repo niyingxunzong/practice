@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">脸部检测</string>
+	<string name="exit">再按一次返回键退出程序</string>
+</resources>

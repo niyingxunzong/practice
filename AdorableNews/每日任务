@@ -1,0 +1,17 @@
+2015-4-1:完成了RadioGroup的导航的实现，仅仅是样式
+2015-4-2:完成了ViewPager的实现，大概样式，每一个Pager的内部View还没实现
+    明日计划：关联RadioGroup中的每一个按钮和ViewPager的滑动
+    
+2015-4-3:其实我们并不需要底部按钮跟随ViewPager滑动，so 屏蔽
+    仅仅让底部的RadioGroup中的每个Button控制ViewPager
+    
+<----
+使用Fragment首先Fragment所在的Activity要有一个空的容器View（ViewGroup）
+然后为每个Fragment写布局
+
+-->
+
+
+2015-08-02:day31_0201:06
+
+2015-08-03 添加了tab页面然后
