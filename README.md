@@ -9,6 +9,7 @@
 - MobileDataMonitor  学习Android写的第一项目，手机流量监控程序，当时还是Android 2.2.3呢  完成度99%
 - itroutemap  大学的时候，当时还是一个开发web的人，也想写一个自己博客。就用Django写了一个，由于考试的耽搁，后来又做了Android开发一直没有写完   完成度60%吧
 - SlidingMenu 这个是在慕课网上学习的，一个仿QQ侧滑效果
+- spider  当时做一个Android工具需要数据，想用Python来抓取网页，就写了个Python小爬虫
 
 
 P.S. 大多数都半途而废了，只能感叹时间有限啊。学会了技术就不想写这些小Demo了。。。
