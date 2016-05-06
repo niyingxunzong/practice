@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:slidingmenu="http://schemas.android.com/apk/res/cn.adorkable.slidingmenu"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_frame_background">
+    <cn.adorkable.slidingmenu.view.SlidingMenu
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        slidingmenu:right_padding="100dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- menu-->
+            <include layout="@layout/left_menu"></include>
+            <!-- 内容区域 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/qq">
+
+            </LinearLayout>
+        </LinearLayout>
+    </cn.adorkable.slidingmenu.view.SlidingMenu>
+
+</RelativeLayout>
