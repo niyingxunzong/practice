@@ -1,5 +1,6 @@
-# practice
+# 所包含的练习项目简介
 
+------------------------
 
 - AndoralbeNews  一个Android的新闻客户端，做Android实习生的时候边学习边做的，完成度30%
 - AdorkableLight  一个Android手机上用闪光灯当做手电筒的项目，完成度99%
